@@ -1,9 +1,12 @@
 import React from 'react'
 
-function Card(props){
-    console.log(props.channel)
+function Card({channel,btntxt}){
+   
     return (
-        <div>card {props.channel}</div>
+        <div>
+            card {channel}
+            <button>{btntxt}</button>
+        </div>
     )
 }
 

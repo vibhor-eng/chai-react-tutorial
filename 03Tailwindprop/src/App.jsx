@@ -12,9 +12,13 @@ function App() {
 
   return (
     <>
-      <h1 className='bg-green-400 text-black p-4-rounded'>Tailwind test</h1>
+      {/* <h1 className='bg-green-400 text-black p-4-rounded'>Tailwind test</h1>
       <Card channel="chaiaurcode" myArr = {myObj} newArr = {newArr}/>
-      <Card channel = "Vibhor tyagi"/>
+      <Card channel = "Vibhor tyagi"/> */}
+
+      <h1 className='bg-green-400 text-black p-4-rounded'>Tailwind test</h1>
+      <Card channel="chaiaurcode" btntxt="click me"/>
+      <Card channel = "Vibhor tyagi" btntxt="visit me"/>
     </>
   )
 }
