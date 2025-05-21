@@ -10,7 +10,7 @@ function App() {
   //ref hook
   const passwordRef = useRef(null)
 
-  const passwordGenerator = useCallback(() => {
+  const passwordGenerator = useCallback(() => {  
     let pass = ""
     let str  = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz"
 
@@ -18,8 +18,8 @@ function App() {
     if(charAllowed) str += "!@#$%^&*()"
 
     for(let i = 1; i<= length; i++){
-      let char = Math.floor(Math.random * str.length + 1);
-      pass += str.charAt(char)
+      let char = Math.floor(Math.random() * str.length + 1);//create random value with string
+      pass += str.charAt(char)//now pick char 
       
     }
 
@@ -31,7 +31,7 @@ function App() {
   //callback is used for optimization
   const copyPassword = useCallback(() =>{
     passwordRef.current?.select()
-    passwordRef.current?.setSelectionRange(0,3)
+    // passwordRef.current?.setSelectionRange(0,3)//select range only means kitne char copy karne hai
     window.navigator.clipboard.writeText(password)
   },[password])
 
