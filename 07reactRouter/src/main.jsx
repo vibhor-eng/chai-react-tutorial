@@ -37,6 +37,9 @@ import Github, { githubInfoLoader } from './components/Github/Github.jsx'
       <Route path="/" element={<Layout />}>
         <Route path=""  element={<Home />}/>
         <Route path="about"  element={<About />}/>
+        {/* <Route path="about"  element={<About />}>
+        this is nested in about
+        </Route> */}
         <Route path="contact"  element={<Contact />}/>
         <Route path="user/:userid"  element={<User />}/>
         <Route 
